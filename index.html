@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" media=""screen">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Optimo bookmarklet</title>
+</head>
+<body>
+
+    <div class="centerDiv">
+
+        <h1>Optimo bookmarklet</h1>
+        <p><strong>Drag</strong> the link below into your browser’s <strong>bookmarks bar</strong>.</p>
+        <a href="javascript:(function () { const lct = location.href; if (lct.includes('news/articles')) { alert( 'As a Word Service user, you do not have permissions to open BBC News articles. Please use template functionality inside Optimo to access such content.' ); } else if (lct.includes('articles')) { const optimoId = lct.substr(-12, 12); location.href = `https://optimo.tools.bbc.co.uk/assets/${optimoId}/editor`; } else { alert('This bookmarklet works only with Optimo-generated articles'); } })()">Open in Optimo</a>
+        <p>When you access an Optimo article produced by BBC World Service languages, you will be able to click on the <strong>Open in Optimo</strong> bookmarklet to open / edit the article inside the Optimo editor.</p>
+        <img src="screen.gif">
+    </div>
+
+</body>
+</html>
