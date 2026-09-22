@@ -15,7 +15,7 @@
         <h1>Optimo bookmarklet</h1>
         <p><strong>Drag</strong> the link below into your browser’s <strong>bookmarks bar</strong>.</p>
         
-        <a href="const u=location.href;if(u.includes('news/articles'))alert('As a Word Service user, you do not have permissions to open BBC News articles. Please make a copy from the Optimo dashboard to access such content.');else if(u.includes('articles')){const m=u.match(/([a-z0-9]{12,13})(?:\/?$)/i);m?location.href='https://optimo.tools.bbc.co.uk/assets/'+m[1]+'/editor':alert('Unable to find a valid Optimo ID.');}else alert('This bookmarklet works only with Optimo-generated articles');})();">Open in Optimo</a>
+        <a href="javascript:(function(){const u=location.href;if(u.includes('news/articles'))alert('As a Word Service user, you do not have permissions to open BBC News articles. Please use template functionality inside Optimo to access such content.');else if(u.includes('articles')){const m=u.match(/([a-z0-9]{12,13})(?:\/?$)/i);m?location.href='https://optimo.tools.bbc.co.uk/assets/'+m[1]+'/editor':alert('Unable to find a valid Optimo ID.');}else alert('This bookmarklet works only with Optimo-generated articles');})();">Open in Optimo</a>
         
         <p>When you access an Optimo article produced by BBC World Service languages, you will be able to click on the <strong>Open in Optimo</strong> bookmarklet to open / edit the article inside the Optimo editor.</p>
 
